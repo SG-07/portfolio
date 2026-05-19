@@ -1,18 +1,65 @@
+import { useEffect, useState } from "react";
+
 import { motion } from "framer-motion";
+
 import { socials } from "../../data/socials";
 
 import "./FloatingDock.css";
 
 const FloatingDock = () => {
+  const [hideDock, setHideDock] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer =
+        document.querySelector("footer");
+
+      if (!footer) return;
+
+      const footerTop =
+        footer.getBoundingClientRect().top;
+
+      const windowHeight = window.innerHeight;
+
+      // Mobile only
+      if (window.innerWidth <= 768) {
+        setHideDock(
+          footerTop < windowHeight - 120
+        );
+      } else {
+        setHideDock(false);
+      }
+    };
+
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+    };
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={{
+        opacity: hideDock ? 0 : 1,
+        y: hideDock ? 20 : 0,
+      }}
       transition={{
-        duration: 0.6,
+        duration: 0.35,
         ease: "easeOut",
       }}
-      className="floating-dock"
+      className={`floating-dock ${
+        hideDock ? "dock-hidden" : ""
+      }`}
     >
       {socials.map((social) => {
         const Icon = social.icon;
