@@ -3,6 +3,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaEnvelope,
+  FaFileAlt,
 } from "react-icons/fa";
 
 export const socials = [
@@ -23,5 +24,12 @@ export const socials = [
     name: "Email",
     icon: FaEnvelope,
     url: "mailto:gangwar.satyam01@gmail.com",
+  },
+  {
+    id: 4,
+    name: "Resume",
+    icon: FaFileAlt,
+    url: "https://drive.google.com/drive/folders/1lmoa2bGql6PkSDq3U-Jgi8MkOoPMwFx_?usp=sharing",
+    label: "Resume",
   },
 ];

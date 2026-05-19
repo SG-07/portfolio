@@ -1,0 +1,190 @@
+@import "./theme.css";
+
+/* =========================
+   GOOGLE FONTS
+========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* =========================
+   TAILWIND
+========================== */
+
+@import "tailwindcss";
+
+/* =========================
+   RESET
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   HTML & BODY
+========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   ROOT APP
+========================== */
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   IMAGES
+========================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   BUTTONS
+========================== */
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* =========================
+   INPUTS
+========================== */
+
+input,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+/* =========================
+   SELECTION
+========================== */
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: white;
+}
+
+/* =========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* =========================
+   REUSABLE LAYOUTS
+========================== */
+
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.section-spacing {
+  padding-block: 6rem;
+}
+
+/* =========================
+   BACKGROUND HELPERS
+========================== */
+
+.bg-grid {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+}
+
+/* =========================
+   ANIMATION HELPERS
+========================== */
+
+.transition-default {
+  transition: var(--transition-normal);
+}
+
+.hover-lift {
+  transition: var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
