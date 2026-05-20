@@ -1,0 +1,267 @@
+.approach-section {
+  padding: 120px 0;
+}
+
+.approach-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.approach-header {
+  margin-bottom: 50px;
+}
+
+.approach-label {
+  margin-bottom: 14px;
+
+  color: var(--accent-cyan);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.approach-heading {
+  max-width: 700px;
+
+  color: var(--text-primary);
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+
+  line-height: 1.08;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  );
+
+  gap: 24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.approach-card {
+  position: relative;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  padding: 34px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(34, 211, 238, 0.2);
+
+  box-shadow:
+    0 0 40px
+    rgba(34, 211, 238, 0.08);
+}
+
+/* =========================
+   DEFAULT STATE
+========================= */
+
+.card-default {
+  position: absolute;
+  inset: 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.approach-card:hover .card-default {
+  opacity: 0;
+
+  transform: translateY(-10px);
+}
+
+.phase-number {
+  color:
+    rgba(255, 255, 255, 0.08);
+
+  font-size: 5rem;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.phase-title {
+  color: var(--text-primary);
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.phase-preview {
+  max-width: 320px;
+
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+}
+
+/* =========================
+   HOVER STATE
+========================= */
+
+.card-hover {
+  position: absolute;
+  inset: 34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  opacity: 0;
+
+  transform: translateY(14px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.approach-card:hover .card-hover {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.phase-description {
+  color: var(--text-secondary);
+
+  line-height: 1.9;
+}
+
+.phase-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.phase-tag {
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  color: var(--text-secondary);
+
+  font-size: 0.8rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.approach-footer {
+  margin-top: 40px;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 0.95rem;
+
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-section {
+    padding: 100px 0;
+  }
+
+  .approach-card {
+    min-height: 280px;
+
+    padding: 28px;
+  }
+
+  .card-default,
+  .card-hover {
+    inset: 28px;
+  }
+
+  .phase-number {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach-heading {
+    font-size: 2rem;
+  }
+
+  .approach-card {
+    min-height: 260px;
+  }
+
+  .phase-title {
+    font-size: 1.3rem;
+  }
+}

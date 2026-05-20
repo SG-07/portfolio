@@ -2,6 +2,7 @@ import Hero from "../components/hero/Hero";
 import About from "../components/about/About";
 import Skills from "../components/techstack/TechStack";
 import Projects from "../components/projects/Projects";
+import Approach from "../components/approach/Approach";
 // import Journey from "../components/journey/Journey";
 // import Contact from "../components/contact/Contact";
 
@@ -27,6 +28,11 @@ const Home = () => {
       {/* SKILLS */}
       <section id="skills">
         <Skills />
+      </section>
+
+      {/* APPROACH */}
+      <section id="approach">
+        <Approach />
       </section>
 
       {/* JOURNEY */}
