@@ -1,31 +1,86 @@
+import Hero from "../components/hero/Hero";
+
 const Home = () => {
   return (
-    <div
-      style={{
-        minHeight: "200vh",
-        paddingTop: "120px",
-      }}
-    >
-      <section
-        style={{
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Hero Section
+    <div>
+      {/* HERO */}
+      <section id="home">
+        <Hero />
       </section>
 
+      {/* ABOUT (placeholder for now) */}
       <section
+        id="about"
         style={{
-          height: "100vh",
+          minHeight: "100vh",
+          padding: "120px 24px",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          color: "white",
         }}
       >
-        Projects Section
+        About Section (Coming Soon)
+      </section>
+
+      {/* SKILLS */}
+      <section
+        id="skills"
+        style={{
+          minHeight: "100vh",
+          padding: "120px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+        }}
+      >
+        Skills Section (Coming Soon)
+      </section>
+
+      {/* PROJECTS */}
+      <section
+        id="projects"
+        style={{
+          minHeight: "100vh",
+          padding: "120px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+        }}
+      >
+        Projects Section (Coming Soon)
+      </section>
+
+      {/* JOURNEY */}
+      <section
+        id="journey"
+        style={{
+          minHeight: "100vh",
+          padding: "120px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+        }}
+      >
+        Journey Section (Coming Soon)
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        style={{
+          minHeight: "100vh",
+          padding: "120px 24px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "white",
+        }}
+      >
+        Contact Section (Coming Soon)
       </section>
     </div>
   );
