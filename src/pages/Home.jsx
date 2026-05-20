@@ -1,6 +1,6 @@
 import Hero from "../components/hero/Hero";
 import About from "../components/about/About";
-// import Skills from "../components/skills/Skills";
+import Skills from "../components/techstack/TechStack";
 import Projects from "../components/projects/Projects";
 // import Journey from "../components/journey/Journey";
 // import Contact from "../components/contact/Contact";
@@ -25,18 +25,8 @@ const Home = () => {
       </section>
 
       {/* SKILLS */}
-      <section
-        id="skills"
-        style={{
-          minHeight: "100vh",
-          padding: "120px 24px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-        }}
-      >
-        Skills Section (Coming Soon)
+      <section id="skills">
+        <Skills />
       </section>
 
       {/* JOURNEY */}
