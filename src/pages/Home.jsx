@@ -4,7 +4,7 @@ import Skills from "../components/techstack/TechStack";
 import Projects from "../components/projects/Projects";
 import Approach from "../components/approach/Approach";
 import Journey from "../components/timeline/Journey";
-// import Contact from "../components/contact/Contact";
+import Contact from "../components/contact/Contact";
 
 const Home = () => {
   return (
@@ -43,17 +43,8 @@ const Home = () => {
 
       {/* CONTACT */}
       <section
-        id="contact"
-        style={{
-          minHeight: "100vh",
-          padding: "120px 24px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-        }}
-      >
-        Contact Section (Coming Soon)
+        id="contact">
+        <Contact />
       </section>
     </div>
   );
