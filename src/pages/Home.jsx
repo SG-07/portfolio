@@ -1,7 +1,7 @@
 import Hero from "../components/hero/Hero";
 import About from "../components/about/About";
 // import Skills from "../components/skills/Skills";
-// import Projects from "../components/projects/Projects";
+import Projects from "../components/projects/Projects";
 // import Journey from "../components/journey/Journey";
 // import Contact from "../components/contact/Contact";
 
@@ -18,6 +18,12 @@ const Home = () => {
         <About />
       </section>
 
+      {/* PROJECTS */}
+      <section
+        id="projects">
+        <Projects />
+      </section>
+
       {/* SKILLS */}
       <section
         id="skills"
@@ -31,21 +37,6 @@ const Home = () => {
         }}
       >
         Skills Section (Coming Soon)
-      </section>
-
-      {/* PROJECTS */}
-      <section
-        id="projects"
-        style={{
-          minHeight: "100vh",
-          padding: "120px 24px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-        }}
-      >
-        Projects Section (Coming Soon)
       </section>
 
       {/* JOURNEY */}
