@@ -3,7 +3,7 @@ import About from "../components/about/About";
 import Skills from "../components/techstack/TechStack";
 import Projects from "../components/projects/Projects";
 import Approach from "../components/approach/Approach";
-// import Journey from "../components/journey/Journey";
+import Journey from "../components/timeline/Journey";
 // import Contact from "../components/contact/Contact";
 
 const Home = () => {
@@ -37,17 +37,8 @@ const Home = () => {
 
       {/* JOURNEY */}
       <section
-        id="journey"
-        style={{
-          minHeight: "100vh",
-          padding: "120px 24px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "white",
-        }}
-      >
-        Journey Section (Coming Soon)
+        id="journey">
+        <Journey />
       </section>
 
       {/* CONTACT */}

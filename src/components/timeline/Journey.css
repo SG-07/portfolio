@@ -1,0 +1,200 @@
+.journey-section {
+  padding: 120px 0;
+}
+
+.journey-container {
+  width: min(950px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.journey-header {
+  margin-bottom: 60px;
+}
+
+.journey-label {
+  margin-bottom: 14px;
+
+  color: var(--accent-cyan);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.journey-heading {
+  max-width: 720px;
+
+  color: var(--text-primary);
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+
+  line-height: 1.08;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 26px;
+}
+
+.timeline-item {
+  position: relative;
+
+  display: flex;
+  gap: 24px;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.timeline-dot {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+
+  margin-top: 10px;
+
+  border-radius: 50%;
+
+  background: var(--accent-cyan);
+
+  flex-shrink: 0;
+
+  box-shadow:
+    0 0 20px
+    rgba(34, 211, 238, 0.4);
+}
+
+.timeline-line {
+  position: absolute;
+
+  top: 24px;
+  left: 6px;
+
+  width: 2px;
+  height: calc(100% + 26px);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.timeline-content {
+  flex: 1;
+
+  padding: 22px 24px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(34, 211, 238, 0.18);
+
+  box-shadow:
+    0 0 30px
+    rgba(34, 211, 238, 0.08);
+}
+
+.timeline-year {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--accent-cyan);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.timeline-title {
+  margin-bottom: 10px;
+
+  color: var(--text-primary);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+
+  line-height: 1.8;
+
+  font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .journey-section {
+    padding: 100px 0;
+  }
+
+  .journey-heading {
+    font-size: 2rem;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    gap: 18px;
+  }
+
+  .timeline-title {
+    font-size: 1.05rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+}
