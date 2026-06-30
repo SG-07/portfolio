@@ -1,24 +1,54 @@
+import { socials } from "../../data/socials";
+
 const HeroButtons = () => {
   const scrollToProjects = () => {
-    const el = document.querySelector("#projects");
+    const el =
+      document.querySelector(
+        "#projects"
+      );
+
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      el.scrollIntoView({
+        behavior: "smooth",
+      });
     }
   };
 
   const openResume = () => {
-    window.open("/resume.pdf", "_blank");
+    const resume =
+      socials.find(
+        (item) =>
+          item.name === "Resume"
+      );
+
+    if (resume?.url) {
+      window.open(
+        resume.url,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
   };
 
   return (
     <div className="hero-buttons">
-      <button className="btn primary" onClick={scrollToProjects}>
+
+      <button
+        className="btn primary"
+        onClick={
+          scrollToProjects
+        }
+      >
         View Projects
       </button>
 
-      <button className="btn secondary" onClick={openResume}>
+      <button
+        className="btn secondary"
+        onClick={openResume}
+      >
         View Resume
       </button>
+
     </div>
   );
 };
